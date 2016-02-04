@@ -6,6 +6,7 @@ import mcjty.hotspots.events.ClientForgeEventHandlers;
 import mcjty.hotspots.events.ForgeEventHandlers;
 import mcjty.hotspots.network.PacketHandler;
 import mcjty.hotspots.waila.WailaCompatibility;
+import mcjty.hotspots.world.HotSpotStorage;
 import mcjty.hotspots.worldgen.WorldGen;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -13,6 +14,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStoppedEvent;
 import org.apache.logging.log4j.Logger;
 
 @Mod(modid = HotSpots.MODID, name = HotSpots.MODNAME, dependencies = "required-after:Forge@[11.15.0.1684,)", useMetadata = true,
@@ -44,6 +46,11 @@ public class HotSpots {
 //        };
         proxy.preInit(event);
         WailaCompatibility.registerWaila();
+    }
+
+    @Mod.EventHandler
+    public void serverStopped(FMLServerStoppedEvent event) {
+        HotSpotStorage.clearInstance();
     }
 
     @Mod.EventHandler

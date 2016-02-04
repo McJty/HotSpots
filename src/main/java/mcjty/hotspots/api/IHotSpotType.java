@@ -6,6 +6,12 @@ package mcjty.hotspots.api;
 public interface IHotSpotType {
 
     /**
+     * Get the ID of this type (usually <modid>:<name>)
+     * @return
+     */
+    String getID();
+
+    /**
      * Return how hotspots of this type attenuate
      * @return
      */
@@ -16,4 +22,9 @@ public interface IHotSpotType {
      * @return
      */
     HotSpotLifecycle getLifeCycle();
+
+    /**
+     * Remove all hotspots of this type.
+     */
+    void clear();
 }
