@@ -1,4 +1,4 @@
-package mcjty.immcraft.waila;
+package mcjty.hotspots.waila;
 
 
 import mcp.mobius.waila.api.IWailaConfigHandler;
@@ -22,7 +22,7 @@ public class WailaCompatibility implements IWailaDataProvider {
 
     public static void registerWaila() {
         if(Loader.isModLoaded("Waila")) {
-            FMLInterModComms.sendMessage("Waila", "register", "mcjty.immcraft.waila.WailaCompatibility.load");
+            FMLInterModComms.sendMessage("Waila", "register", "mcjty.hotspots.waila.WailaCompatibility.load");
         }
     }
 

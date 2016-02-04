@@ -1,4 +1,4 @@
-package mcjty.immcraft.network;
+package mcjty.hotspots.network;
 
 
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;

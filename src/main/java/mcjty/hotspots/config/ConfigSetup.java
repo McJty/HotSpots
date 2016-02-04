@@ -1,4 +1,4 @@
-package mcjty.immcraft.config;
+package mcjty.hotspots.config;
 
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.FMLLog;

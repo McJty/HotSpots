@@ -1,4 +1,4 @@
-package mcjty.immcraft.network;
+package mcjty.hotspots.network;
 
 
 import net.minecraftforge.fml.common.network.NetworkRegistry;
@@ -60,13 +60,9 @@ public class PacketHandler {
 
     public static void registerMessages() {
         // Server side
-        INSTANCE.registerMessage(PacketSendKey.Handler.class, PacketSendKey.class, nextID(), Side.SERVER);
-        INSTANCE.registerMessage(PacketPlaceItem.Handler.class, PacketPlaceItem.class, nextID(), Side.SERVER);
         INSTANCE.registerMessage(PacketGetInfoFromServer.Handler.class, PacketGetInfoFromServer.class, nextID(), Side.SERVER);
 
         // Client side
         INSTANCE.registerMessage(PacketReturnInfoHandler.class, PacketReturnInfoToClient.class, nextID(), Side.CLIENT);
-
-        register(nextPacketID(), IngredientsInfoPacketServer.class, IngredientsInfoPacketClient.class);
     }
 }

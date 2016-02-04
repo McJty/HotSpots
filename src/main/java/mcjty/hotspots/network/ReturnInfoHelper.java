@@ -1,4 +1,4 @@
-package mcjty.immcraft.network;
+package mcjty.hotspots.network;
 
 
 

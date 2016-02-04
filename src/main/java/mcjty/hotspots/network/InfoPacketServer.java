@@ -1,4 +1,4 @@
-package mcjty.immcraft.network;
+package mcjty.hotspots.network;
 
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.player.EntityPlayerMP;
